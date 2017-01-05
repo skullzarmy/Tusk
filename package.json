@@ -25,7 +25,7 @@
     "node": ">=0.10.0"
   },
   "license": "MIT",
-  "main": "./lib/masto",
+  "main": "./lib/mastodon",
   "repository": {
     "type": "git",
     "url": "http://github.com/jessicahayley/node-mastodon.git"
