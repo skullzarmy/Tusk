@@ -65,7 +65,16 @@ Update the client's authentication tokens.
 
 -------
 
-#Advanced
+# Examples
+
+### Reading the home timeline
+```javascript
+M.get('timelines/home', {}).then(resp => console.log(resp.data))
+```
+
+-------
+
+# Advanced
 
 You may specify an array of trusted certificate fingerprints if you want to only trust a specific set of certificates.
 When an HTTP response is received, it is verified that the certificate was signed, and the peer certificate's fingerprint must be one of the values you specified. By default, the node.js trusted "root" CAs will be used.
