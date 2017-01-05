@@ -14,7 +14,6 @@ describe('twit', function () {
       assert(twit.config)
       assert.equal(typeof twit.get, 'function')
       assert.equal(typeof twit.post, 'function')
-      assert.equal(typeof twit.stream, 'function')
     })
     it('works with var twit = Twit()', function () {
       var twit = Twit({
@@ -26,7 +25,6 @@ describe('twit', function () {
       assert(twit.config)
       assert.equal(typeof twit.get, 'function')
       assert.equal(typeof twit.post, 'function')
-      assert.equal(typeof twit.stream, 'function')
     })
   })
 

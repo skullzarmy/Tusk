@@ -1,14 +1,12 @@
 {
   "name": "twit",
-  "description": "Twitter API client for node (REST & Streaming)",
+  "description": "Twitter API client for node",
   "version": "2.2.5",
   "author": "Tolga Tezel",
   "keywords": [
     "twitter",
     "api",
     "rest",
-    "stream",
-    "streaming",
     "oauth"
   ],
   "dependencies": {
