@@ -1,10 +1,6 @@
 #node-mastodon
 
-Mastodon API Client for node (WIP)
-
-Todo:
-* Check that all POST stuff works
-* Get media uploads working
+Mastodon API Client for node
 
 #Installing
 
