@@ -1,6 +1,6 @@
 #node-mastodon
 
-Mastodon API Client for node (WIP, doesn't work yet)
+Mastodon API Client for node
 
 #Installing
 
@@ -24,6 +24,9 @@ var M = new Masto({
 ##`var M = new Mastodon(config)`
 
 Create a `Mastodon` instance that can be used to make requests to Mastodon's APIs.
+
+I advise that you use the [oauth](https://www.npmjs.com/package/oauth) package do get the user's access_token.
+You'll need to [register your app](https://github.com/Gargron/mastodon/wiki/API#oauth-apps) on Mastodon first as well.
 
 If authenticating with user context, `config` should be an object of the form:
 ```
@@ -61,9 +64,6 @@ Get the client's authentication tokens.
 Update the client's authentication tokens.
 
 -------
-
-Use the [oauth](https://www.npmjs.com/package/oauth) package do get the user's access_token.
-You'll need to [register your app](https://github.com/Gargron/mastodon/wiki/API#oauth-apps) on Mastodon first.
 
 #Advanced
 
