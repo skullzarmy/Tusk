@@ -14,8 +14,9 @@ npm install mastodon
 var Mastodon = require('mastodon')
 
 var M = new Masto({
-  access_token:         '...',
-  timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
+  access_token: '...',
+  timeout_ms: 60*1000,  // optional HTTP request timeout to apply to all requests.
+  api_url: 'https://gay.crime.team/api/v1/', // optional, defaults to https://mastodon.social/api/v1/
 })
 ```
 
@@ -31,7 +32,7 @@ You'll need to [register your app](https://github.com/Gargron/mastodon/wiki/API#
 If authenticating with user context, `config` should be an object of the form:
 ```
 {
-  access_token:         '...'
+  access_token: '...'
 }
 ```
 
