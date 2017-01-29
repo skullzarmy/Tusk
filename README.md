@@ -1,6 +1,6 @@
 #node-mastodon
 
-[Mastodon](https://mastodon.social) API Client for node (supports alternate domains)
+[Mastodon](https://github.com/tootsuite/mastodon/) API Client for node
 
 #Installing
 
