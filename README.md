@@ -27,7 +27,7 @@ var M = new Masto({
 Create a `Mastodon` instance that can be used to make requests to Mastodon's APIs. Currently only supports oauth2 access tokens (no username/password auth) for security reasons.
 
 I advise that you use the [oauth](https://www.npmjs.com/package/oauth) package to get the user's access_token. More information about how to do that is [on the wiki](https://github.com/jessicahayley/node-mastodon/wiki/Getting-an-access_token-with-the-oauth-package).  
-You'll need to [register your app](https://github.com/Gargron/mastodon/wiki/API#oauth-apps) on Mastodon first as well.
+You'll need to [register your app](https://github.com/tootsuite/mastodon/blob/master/docs/Using-the-API/API.md#oauth-apps) on Mastodon first as well.
 
 If authenticating with user context, `config` should be an object of the form:
 ```
