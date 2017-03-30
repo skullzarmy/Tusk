@@ -1,14 +1,14 @@
-#node-mastodon
+# node-mastodon
 
 [Mastodon](https://github.com/tootsuite/mastodon/) API Client for node
 
-#Installing
+# Installing
 
 ```
 npm install mastodon
 ```
 
-##Usage:
+## Usage:
 
 ```javascript
 var Mastodon = require('mastodon')
@@ -22,7 +22,7 @@ var M = new Masto({
 
 # node-mastodon API:
 
-##`var M = new Mastodon(config)`
+## `var M = new Mastodon(config)`
 
 Create a `Mastodon` instance that can be used to make requests to Mastodon's APIs. Currently only supports oauth2 access tokens (no username/password auth) for security reasons.
 
@@ -36,7 +36,7 @@ If authenticating with user context, `config` should be an object of the form:
 }
 ```
 
-##`M.get(path, [params], callback)`
+## `M.get(path, [params], callback)`
 GET any of the REST API endpoints.
 
 **path**
@@ -54,14 +54,14 @@ The endpoint to hit.
 - `data` is the parsed data received from Mastodon.
 - `response` is the [http.IncomingMessage](http://nodejs.org/api/http.html#http_http_incomingmessage) received from Mastodon.
 
-##`M.post(path, [params], callback)`
+## `M.post(path, [params], callback)`
 
 POST any of the REST API endpoints. Same usage as `T.get()`.
 
-##`M.getAuth()`
+## `M.getAuth()`
 Get the client's authentication tokens.
 
-##`M.setAuth(tokens)`
+## `M.setAuth(tokens)`
 Update the client's authentication tokens.
 
 -------
