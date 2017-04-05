@@ -22,7 +22,7 @@ var M = new Masto({
 
 # node-mastodon API:
 
-## `var M = new Mastodon(config)`
+## `var M = new Masto(config)`
 
 Create a `Mastodon` instance that can be used to make requests to Mastodon's APIs. Currently only supports oauth2 access tokens (no username/password auth) for security reasons.
 
@@ -89,7 +89,7 @@ When an HTTP response is received, it is verified that the certificate was signe
 
 eg.
 ```js
-var M = new Mastodon({
+var M = new Masto({
   access_token:         '...',
   trusted_cert_fingerprints: [
     '66:EA:47:62:D9:B1:4F:1A:AE:89:5F:68:BA:6B:8E:BB:F8:1D:BF:8E',
