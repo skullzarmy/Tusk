@@ -11,7 +11,7 @@ npm install mastodon
 ## Usage:
 
 ```javascript
-var Mastodon = require('mastodon')
+var Masto = require('mastodon')
 
 var M = new Masto({
   access_token: '...',
