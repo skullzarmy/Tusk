@@ -2,7 +2,7 @@
   "name": "mastodon",
   "description": "Mastodon API client for node",
   "version": "1.2.0",
-  "author": "Jessica Hayley",
+  "author": "j hayley",
   "keywords": [
     "mastodon",
     "api",
@@ -28,7 +28,7 @@
   "main": "./lib/mastodon",
   "repository": {
     "type": "git",
-    "url": "http://github.com/jessicahayley/node-mastodon.git"
+    "url": "http://github.com/jhayley/node-mastodon.git"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha tests/* -t 70000 -R spec --bail --globals domain,_events,_maxListeners"
