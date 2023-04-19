@@ -1,5 +1,5 @@
 {
-    "name": "tusk",
+    "name": "tusk-mastodon",
     "description": "Async Mastodon API client for node",
     "version": "1.0.0",
     "author": "skullzarmy",
@@ -8,7 +8,8 @@
         "api",
         "rest",
         "async",
-        "axios"
+        "axios",
+        "tusk"
     ],
     "dependencies": {
         "mime": "^1.3.4"
