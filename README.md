@@ -78,7 +78,7 @@ Update the client's authentication tokens.
 T.get("timelines/home", {}).then((resp) => console.log(resp.data));
 ```
 
-### Upload an image and attach it to a tweet
+### Upload an image and attach it to a toot
 
 ```javascript
 var id;
