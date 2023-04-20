@@ -2,6 +2,10 @@
 
 [Mastodon](https://github.com/skullzarmy/Tusk) API Client for node - forked from node-mastodon [abandoned]
 
+[![npm](https://img.shields.io/npm/dw/tusk-mastodon?label=NPM%20INSTALLS&style=for-the-badge)](https://www.npmjs.com/package/tusk-mastodon)
+
+[![maintained with hearth by skullzarmy](https://img.shields.io/badge/maintained%20with%20%E2%99%A5%20by-skullzarmy-ff1515.svg)](https://github.com/skullzarmy)
+
 # Installing
 
 ```
