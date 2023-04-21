@@ -2,6 +2,10 @@
 
 [Mastodon](https://github.com/skullzarmy/Tusk) API Client for node - forked from node-mastodon [abandoned]
 
+### Note
+
+I forked this project and fixed the obvious issues / updated the packages, and replaced `request` with `axios`. I have tested and ensured this works for my limited use-cases, but I have not fully tested that everything works. Namely I have not tested with cert fingerprints. If you find any issues please open an issue and I will handle it as soon as I can. Thanks!
+
 [![npm](https://img.shields.io/npm/dw/tusk-mastodon?label=NPM%20INSTALLS&style=for-the-badge)](https://www.npmjs.com/package/tusk-mastodon)
 
 [![maintained with hearth by skullzarmy](https://img.shields.io/badge/maintained%20with%20%E2%99%A5%20by-skullzarmy-ff1515.svg)](https://github.com/skullzarmy)
