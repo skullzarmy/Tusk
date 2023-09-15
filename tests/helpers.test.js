@@ -1,5 +1,5 @@
 import { expect, test, describe } from "bun:test";
-import * as helpers from "../lib/helpers"; // Assuming the file is in the `lib` directory
+import * as helpers from "../lib/helpers";
 
 describe("Helpers for Mastodon API Wrapper", () => {
     describe("moveParamsIntoPath", () => {
