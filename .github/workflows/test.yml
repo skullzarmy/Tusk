@@ -38,7 +38,7 @@ jobs:
                   source_dir: ./lib # Replace with your source directory
                   output_dir: ./docs # Output directory
                   #   config_file: jsdoc.json  # Optional, if you have a JSDoc config file
-                  template: minami # Optional, if you want to use a specific template
+                  template: tactile # Optional, if you want to use a specific template
                   front_page: README.md # Optional, if you want a custom front page
 
             - name: Upload Documentation as Artifact
