@@ -1,4 +1,4 @@
-name: Run Tests
+name: Run Tests and Generate Docs
 
 on:
     push:
@@ -31,3 +31,24 @@ jobs:
 
             - name: Run Tests
               run: bun test
+
+            - name: Build Documentation
+              uses: andstor/jsdoc-action@v1
+              with:
+                  source_dir: ./lib # Replace with your source directory
+                  output_dir: ./docs # Output directory
+                  #   config_file: jsdoc.json  # Optional, if you have a JSDoc config file
+                  template: minami # Optional, if you want to use a specific template
+                  front_page: README.md # Optional, if you want a custom front page
+
+            - name: Upload Documentation as Artifact
+              uses: actions/upload-artifact@v3
+              with:
+                  name: documentation
+                  path: ./docs/
+
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.TUSK_DEPLOY_TOKEN }}
+                  publish_dir: ./docs/
