@@ -2,15 +2,17 @@
 
 [Mastodon](https://github.com/skullzarmy/Tusk) API Client for node - forked from node-mastodon [abandoned]
 
-### Note
+### Notes
 
-I forked this project and fixed the obvious issues / updated the packages, and replaced `request` with `axios`.
+-   I forked this project and fixed the obvious issues / updated the packages, and replaced `request` with `axios`.
+-   I added tests using [Bun.sh](https://bun.sh/) runtime and test environment.
+-   Introduced individual HTTP methods (get, post, put, etc.) alongside the generic request method.
 
-I added tests using [Bun.sh](https://bun.sh/) runtime and test environment.
-
-If you find any issues please open an issue and I will handle it as soon as I can. Thanks!
+If you find any bugs please open an issue and I will handle it as soon as I can. Thanks!
 
 [![npm](https://img.shields.io/npm/dw/tusk-mastodon?label=NPM%20INSTALLS&style=for-the-badge)](https://www.npmjs.com/package/tusk-mastodon)
+
+[![Run Tests](https://github.com/skullzarmy/Tusk/actions/workflows/test.yml/badge.svg)](https://github.com/skullzarmy/Tusk/actions/workflows/test.yml)
 
 [![Known Vulnerabilities](https://snyk.io/test/github/skullzarmy/Tusk/badge.svg?style=flat-square)](https://snyk.io/test/github/skullzarmy/Tusk)
 
