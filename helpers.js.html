@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>helpers.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Tusk.html">Tusk</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#delete">delete</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#formEncodeParams">formEncodeParams</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#get">get</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#getAuth">getAuth</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#patch">patch</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#post">post</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#put">put</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#request">request</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#setAuth">setAuth</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#attachBodyInfoToError">attachBodyInfoToError</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#makeMastodonError">makeMastodonError</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#moveParamsIntoPath">moveParamsIntoPath</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#STATUS_CODES_TO_ABORT_ON">STATUS_CODES_TO_ABORT_ON</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">helpers.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * For each `/:param` fragment in path, move the value in params
+ * at that key to path. If the key is not found in params, throw.
+ *
+ * @param  {Object} params  Object used to build path.
+ * @param  {string} path   String to transform.
+ * @return {string} Modified path
+ */
+exports.moveParamsIntoPath = (params, path) => {
+    const rgxParam = /\/:(\w+)/g;
+
+    return path.replace(rgxParam, (hit) => {
+        const paramName = hit.slice(2);
+        const suppliedVal = params[paramName];
+        if (!suppliedVal) {
+            throw new Error(`Mastodon: Params object is missing a required parameter for this request: ${paramName}`);
+        }
+        delete params[paramName];
+        return `/${suppliedVal}`;
+    });
+};
+
+/**
+ * Attach error information from the response body to the error object.
+ *
+ * @param  {Error} err   Error instance to which body info will be attached.
+ * @param  {Object} body JSON object that is the deserialized HTTP response body received from Mastodon.
+ */
+exports.attachBodyInfoToError = (err, body) => {
+    err.mastodonReply = body;
+    if (!body) return;
+
+    err.allErrors = err.allErrors || []; // Ensure allErrors is an array
+
+    if (body.error) {
+        err.message = body.error;
+        err.allErrors.push(body);
+    } else if (body.errors &amp;&amp; body.errors.length) {
+        err.message = body.errors[0].message;
+        err.code = body.errors[0].code;
+        err.allErrors.push(...body.errors);
+    }
+};
+
+/**
+ * Create a new Mastodon error object.
+ *
+ * @param  {string} [message] Optional error message.
+ * @return {Error} A new error object.
+ */
+exports.makeMastodonError = (message) => {
+    const err = new Error(message || "");
+    err.code = null;
+    err.allErrors = [];
+    err.mastodonReply = null;
+    return err;
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Sat Sep 30 2023 08:08:56 GMT+0000 (Coordinated Universal Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

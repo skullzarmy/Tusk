@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Tusk.html">Tusk</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#delete">delete</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#formEncodeParams">formEncodeParams</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#get">get</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#getAuth">getAuth</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#patch">patch</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#post">post</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#put">put</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#request">request</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Tusk.html#setAuth">setAuth</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#attachBodyInfoToError">attachBodyInfoToError</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#makeMastodonError">makeMastodonError</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#moveParamsIntoPath">moveParamsIntoPath</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#STATUS_CODES_TO_ABORT_ON">STATUS_CODES_TO_ABORT_ON</a></span></li>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article><h1>Tusk-Mastodon</h1>
+<p><a href="https://github.com/skullzarmy/Tusk">Mastodon</a> API Client for node - forked from node-mastodon [abandoned]</p>
+<h3>Notes</h3>
+<ul>
+<li>I forked this project and fixed the obvious issues / updated the packages, and replaced <code>request</code> with <code>axios</code>.</li>
+<li>I added tests using <a href="https://bun.sh/">Bun.sh</a> runtime and test environment.</li>
+<li>Introduced individual HTTP methods (get, post, put, etc.) alongside the generic request method.</li>
+</ul>
+<p>If you find any bugs please open an issue and I will handle it as soon as I can. Thanks!</p>
+<p><a href="https://www.npmjs.com/package/tusk-mastodon"><img src="https://img.shields.io/npm/dw/tusk-mastodon?label=NPM%20INSTALLS&amp;style=for-the-badge" alt="npm"></a></p>
+<p><a href="https://github.com/skullzarmy/Tusk/actions/workflows/test.yml"><img src="https://github.com/skullzarmy/Tusk/actions/workflows/test.yml/badge.svg" alt="Run Tests"></a></p>
+<p><a href="https://snyk.io/test/github/skullzarmy/Tusk"><img src="https://snyk.io/test/github/skullzarmy/Tusk/badge.svg?style=flat-square" alt="Known Vulnerabilities"></a></p>
+<p><a href="https://github.com/skullzarmy"><img src="https://img.shields.io/badge/maintained%20with%20%E2%99%A5%20by-skullzarmy-ff1515.svg" alt="maintained with hearth by skullzarmy"></a></p>
+<h1>Installing</h1>
+<pre class="prettyprint source"><code>npm install tusk-mastodon
+</code></pre>
+<h2>Usage:</h2>
+<pre class="prettyprint source lang-javascript"><code>var Tusk = require(&quot;tusk-mastodon&quot;);
+
+var T = new Tusk({
+    access_token: &quot;...&quot;,
+    timeout_ms: 60 * 1000, // optional HTTP request timeout to apply to all requests.
+    api_url: &quot;https://mastodon.social/api/v1/&quot;, // optional, defaults to https://mastodon.social/api/v1/
+});
+</code></pre>
+<h1>Tusk API:</h1>
+<h2><code>var T = new Tusk(config)</code></h2>
+<p>Create a <code>Tusk</code> instance that can be used to make requests to Mastodon's APIs. Only supports oauth2 access tokens (no username/password auth) for security reasons.</p>
+<p>I advise that you use the <a href="https://www.npmjs.com/package/oauth">oauth</a> package to get the user's access_token. More information about how to do that is <a href="https://github.com/jessicahayley/node-mastodon/wiki/Getting-an-access_token-with-the-oauth-package">on the node-mastodon wiki</a>.<br>
+You'll need to register your app on Mastodon first as well.</p>
+<p>If authenticating with user context, <code>config</code> should be an object of the form:</p>
+<pre class="prettyprint source"><code>{
+  access_token: '...'
+}
+</code></pre>
+<h2><code>T.get(path, [params], callback)</code></h2>
+<p>GET any of the REST API endpoints.</p>
+<p><strong>path</strong></p>
+<p>The endpoint to hit.</p>
+<p><strong>params</strong></p>
+<p>(Optional) parameters for the request.</p>
+<p><strong>callback</strong></p>
+<p><code>function (err, data, response)</code></p>
+<ul>
+<li><code>data</code> is the parsed data received from Mastodon.</li>
+<li><code>response</code> is the <a href="http://nodejs.org/api/http.html#http_http_incomingmessage">http.IncomingMessage</a> received from Mastodon.</li>
+</ul>
+<h2><code>T.post(path, [params], callback)</code></h2>
+<p>POST any of the REST API endpoints. Same usage as <code>T.get()</code>.</p>
+<h2><code>T.getAuth()</code></h2>
+<p>Get the client's authentication tokens.</p>
+<h2><code>T.setAuth(tokens)</code></h2>
+<p>Update the client's authentication tokens.</p>
+<h1>Tests</h1>
+<ol start="0">
+<li>Install Bun</li>
+</ol>
+<pre class="prettyprint source lang-bash"><code>curl -fsSL https://bun.sh/install | bash # for macOS, Linux, and WSL
+</code></pre>
+<ol>
+<li>Run Tests</li>
+</ol>
+<pre class="prettyprint source lang-bash"><code>bun test
+</code></pre>
+<hr>
+<h1>Examples</h1>
+<h3>Reading the home timeline</h3>
+<pre class="prettyprint source lang-javascript"><code>T.get(&quot;timelines/home&quot;, {}).then((resp) => console.log(resp.data));
+</code></pre>
+<h3>Upload an image and attach it to a toot</h3>
+<pre class="prettyprint source lang-javascript"><code>var id;
+T.post(&quot;media&quot;, { file: fs.createReadStream(&quot;path/to/image.png&quot;) }).then((resp) => {
+    id = resp.data.id;
+    T.post(&quot;statuses&quot;, { status: &quot;#selfie&quot;, media_ids: [id] });
+});
+</code></pre>
+<hr>
+<h1>Advanced</h1>
+<p>You may specify an array of trusted certificate fingerprints if you want to only trust a specific set of certificates.
+When an HTTP response is received, it is verified that the certificate was signed, and the peer certificate's fingerprint must be one of the values you specified. By default, the node.js trusted &quot;root&quot; CAs will be used.</p>
+<p>eg.</p>
+<pre class="prettyprint source lang-js"><code>var T = new Tusk({
+    access_token: &quot;...&quot;,
+    trusted_cert_fingerprints: [&quot;66:EA:47:62:D9:B1:4F:1A:AE:89:5F:68:BA:6B:8E:BB:F8:1D:BF:8E&quot;],
+});
+</code></pre></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Sat Sep 30 2023 08:08:56 GMT+0000 (Coordinated Universal Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
