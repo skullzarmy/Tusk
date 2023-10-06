@@ -1,6 +1,6 @@
 # Tusk-Mastodon
 
-[Mastodon](https://github.com/skullzarmy/Tusk) API Client for node - forked from node-mastodon [abandoned]
+[Mastodon](https://github.com/skullzarmy/Tusk) API Client for node - forked from [node-mastodon](https://github.com/hylyh/node-mastodon) [abandoned]
 
 [Source on GitHub](https://github.com/skullzarmy/Tusk) | [Documentation](https://skullzarmy.github.io/Tusk/)
 
