@@ -5,7 +5,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Global</title>
+  <title>Tusk Mastodon Documentation Global</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -40,6 +40,10 @@
         </a>
         <div class="logo">
             
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">Tusk Mastodon Documentation</h1>
+                </a>
             
         </div>
         <div class="menu">
@@ -52,6 +56,22 @@
                     Documentation
                 </a>
                 
+                 
+                    
+                        <a
+                            class="link user-link "
+                            href="https://github.com/skullzarmy/Tusk"
+                        >
+                            Github
+                        </a>
+                    
+                        <a
+                            class="link user-link "
+                            href="https://joepeterson.work/"
+                        >
+                            Maintained by Joe Peterson
+                        </a>
+                    
                 
                 
             </div>
@@ -63,6 +83,10 @@
             class="sidebar "
             id="sidebarNav"
         >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
             
             <nav>
                 
@@ -174,10 +198,12 @@
 </h4>
 
 
+<p class="summary">Defines an array of HTTP status codes that the application should not attempt to reconnect to Mastodon on.</p>
+
 
 
 <div class="description">
-    Defines an array of HTTP status codes that the application should not attempt to reconnect to Mastodon on.
+    <p>Defines an array of HTTP status codes that the application should not attempt to reconnect to Mastodon on.</p>
 </div>
 
 
@@ -256,9 +282,11 @@
     
 
     
+    <p class="summary">Attach error information from the response body to the error object.</p>
+    
     
     <div class="description">
-        Attach error information from the response body to the error object.
+        <p>Attach error information from the response body to the error object.</p>
     </div>
     
 
@@ -312,7 +340,7 @@
 
   
 
-  <td class="description last">Error instance to which body info will be attached.</td>
+  <td class="description last"><p>Error instance to which body info will be attached.</p></td>
 </tr>
 
 
@@ -337,7 +365,7 @@
 
   
 
-  <td class="description last">JSON object that is the deserialized HTTP response body received from Mastodon.</td>
+  <td class="description last"><p>JSON object that is the deserialized HTTP response body received from Mastodon.</p></td>
 </tr>
 
 
@@ -429,9 +457,11 @@
     
 
     
+    <p class="summary">Create a new Mastodon error object.</p>
+    
     
     <div class="description">
-        Create a new Mastodon error object.
+        <p>Create a new Mastodon error object.</p>
     </div>
     
 
@@ -497,7 +527,7 @@
 
   
 
-  <td class="description last">Optional error message.</td>
+  <td class="description last"><p>Optional error message.</p></td>
 </tr>
 
 
@@ -576,7 +606,7 @@
 
 <div class="columns">
     
-    <div class='param-desc column is-7'>A new error object.</div>
+    <div class='param-desc column is-7'><p>A new error object.</p></div>
     
     
     <div class='column is-5 has-text-left'>
@@ -614,10 +644,13 @@
     
 
     
+    <p class="summary"><p>For each <code>/:param</code> fragment in path, move the value in params
+at that key to path.</p></p>
+    
     
     <div class="description">
-        For each `/:param` fragment in path, move the value in params
-at that key to path. If the key is not found in params, throw.
+        <p>For each <code>/:param</code> fragment in path, move the value in params
+at that key to path. If the key is not found in params, throw.</p>
     </div>
     
 
@@ -671,7 +704,7 @@ at that key to path. If the key is not found in params, throw.
 
   
 
-  <td class="description last">Object used to build path.</td>
+  <td class="description last"><p>Object used to build path.</p></td>
 </tr>
 
 
@@ -696,7 +729,7 @@ at that key to path. If the key is not found in params, throw.
 
   
 
-  <td class="description last">String to transform.</td>
+  <td class="description last"><p>String to transform.</p></td>
 </tr>
 
 
@@ -775,7 +808,7 @@ at that key to path. If the key is not found in params, throw.
 
 <div class="columns">
     
-    <div class='param-desc column is-7'>Modified path</div>
+    <div class='param-desc column is-7'><p>Modified path</p></div>
     
     
     <div class='column is-5 has-text-left'>
@@ -830,6 +863,8 @@ at that key to path. If the key is not found in params, throw.
 <script src="scripts/app.min.js"></script>
 <script>PR.prettyPrint();</script>
 <script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
 
 
 </body>
