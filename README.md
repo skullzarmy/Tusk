@@ -119,19 +119,3 @@ T.post("media", { file: fs.createReadStream("path/to/image.png") }).then((resp) 
     T.post("statuses", { status: "#selfie", media_ids: [id] });
 });
 ```
-
----
-
-# Advanced
-
-You may specify an array of trusted certificate fingerprints if you want to only trust a specific set of certificates.
-When an HTTP response is received, it is verified that the certificate was signed, and the peer certificate's fingerprint must be one of the values you specified. By default, the node.js trusted "root" CAs will be used.
-
-eg.
-
-```js
-var T = new Tusk({
-    access_token: "...",
-    trusted_cert_fingerprints: ["66:EA:47:62:D9:B1:4F:1A:AE:89:5F:68:BA:6B:8E:BB:F8:1D:BF:8E"],
-});
-```
