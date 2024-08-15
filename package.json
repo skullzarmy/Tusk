@@ -2,7 +2,7 @@
   "name": "tusk-mastodon",
   "description": "Async Mastodon API client for node",
   "homepage": "https://skullzarmy.github.io/Tusk/",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "author": "skullzarmy",
   "keywords": [
     "mastodon",
