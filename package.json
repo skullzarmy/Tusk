@@ -1,31 +1,40 @@
 {
-  "name": "tusk-mastodon",
-  "description": "Async Mastodon API client for node",
-  "homepage": "https://skullzarmy.github.io/Tusk/",
-  "version": "2.3.0",
-  "author": "skullzarmy",
-  "keywords": [
-    "mastodon",
-    "api",
-    "rest",
-    "async",
-    "axios",
-    "tusk"
-  ],
-  "dependencies": {
-    "@jsdoc/salty": "^0.2.8",
-    "axios": "^1.7.7"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "license": "MIT",
-  "main": "./lib/mastodon",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/skullzarmy/Tusk"
-  },
-  "scripts": {
-    "test": "bun test"
-  }
+    "name": "tusk-mastodon",
+    "description": "Async Mastodon API client for node",
+    "homepage": "https://skullzarmy.github.io/Tusk/",
+    "version": "2.4.0",
+    "author": "skullzarmy",
+    "keywords": [
+        "mastodon",
+        "api",
+        "rest",
+        "async",
+        "axios",
+        "tusk"
+    ],
+    "dependencies": {
+        "@jsdoc/salty": "^0.2.9",
+        "axios": "^1.10.0"
+    },
+    "devDependencies": {
+        "eslint": "^9.0.0",
+        "prettier": "^3.0.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "license": "MIT",
+    "main": "./lib/mastodon",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/skullzarmy/Tusk"
+    },
+    "scripts": {
+        "test": "bun test",
+        "lint": "eslint lib/ tests/",
+        "lint:fix": "eslint lib/ tests/ --fix",
+        "format": "prettier --write lib/ tests/ *.json *.md",
+        "check-updates": "bun outdated",
+        "docs": "jsdoc -c jsdoc.json"
+    }
 }
