@@ -33,13 +33,7 @@ jobs:
               run: bun test
 
             - name: Build Documentation
-              uses: andstor/jsdoc-action@v1
-              with:
-                  source_dir: ./lib # Replace with your source directory
-                  output_dir: ./docs # Output directory
-                  config_file: jsdoc.json # Optional, if you have a JSDoc config file
-                  template: better-docs # Optional, if you want to use a specific template
-                  front_page: README.md # Optional, if you want a custom front page
+              run: npm run docs
 
             - name: Upload Documentation as Artifact
               uses: actions/upload-artifact@v4

@@ -17,7 +17,9 @@
         "axios": "^1.10.0"
     },
     "devDependencies": {
+        "better-docs": "^2.7.3",
         "eslint": "^9.0.0",
+        "jsdoc": "^4.0.0",
         "prettier": "^3.0.0"
     },
     "engines": {
@@ -35,6 +37,6 @@
         "lint:fix": "eslint lib/ tests/ --fix",
         "format": "prettier --write lib/ tests/ *.json *.md",
         "check-updates": "bun outdated",
-        "docs": "jsdoc -c jsdoc.json"
+        "docs": "jsdoc lib -c jsdoc.json -t node_modules/better-docs -R README.md -d docs"
     }
 }
