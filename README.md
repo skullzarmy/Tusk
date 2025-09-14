@@ -6,15 +6,13 @@
 
 ### Notes
 
--   I forked this project and fixed the obvious issues / updated the packages, and replaced `request` with `axios`.
--   I added tests using [Bun.sh](https://bun.sh/) runtime and test environment.
--   Introduced individual HTTP methods (get, post, put, etc.) alongside the generic request method.
+- I forked this project and fixed the obvious issues / updated the packages, and replaced `request` with `axios`.
+- I added tests using [Bun.sh](https://bun.sh/) runtime and test environment.
+- Introduced individual HTTP methods (get, post, put, etc.) alongside the generic request method.
 
 If you find any bugs please open an issue and I will handle it as soon as I can. Thanks!
 
 [![npm](https://img.shields.io/npm/dw/tusk-mastodon?label=NPM%20INSTALLS&style=for-the-badge)](https://www.npmjs.com/package/tusk-mastodon)
-
-[![Run Tests](https://github.com/skullzarmy/Tusk/actions/workflows/test.yml/badge.svg)](https://github.com/skullzarmy/Tusk/actions/workflows/test.yml)
 
 [![Known Vulnerabilities](https://snyk.io/test/github/skullzarmy/Tusk/badge.svg?style=flat-square)](https://snyk.io/test/github/skullzarmy/Tusk)
 
@@ -71,8 +69,8 @@ The endpoint to hit.
 
 `function (err, data, response)`
 
--   `data` is the parsed data received from Mastodon.
--   `response` is the [http.IncomingMessage](http://nodejs.org/api/http.html#http_http_incomingmessage) received from Mastodon.
+- `data` is the parsed data received from Mastodon.
+- `response` is the [http.IncomingMessage](http://nodejs.org/api/http.html#http_http_incomingmessage) received from Mastodon.
 
 ## `T.post(path, [params], callback)`
 
