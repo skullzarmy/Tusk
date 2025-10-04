@@ -1,10 +1,11 @@
 {
     "name": "tusk-mastodon",
-    "description": "Async Mastodon API client for node",
+    "description": "⚠️ DEPRECATED - Please use 'masto' package instead. Async Mastodon API client for node",
     "homepage": "https://skullzarmy.github.io/Tusk/",
     "version": "2.4.0",
     "author": "skullzarmy",
     "keywords": [
+        "deprecated",
         "mastodon",
         "api",
         "rest",

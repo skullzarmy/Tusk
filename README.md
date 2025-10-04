@@ -1,3 +1,23 @@
+# ⚠️ DEPRECATED - Tusk-Mastodon
+
+## 🚨 This package is deprecated and no longer maintained
+
+**Tusk has been retired and discontinued.** This repository is kept for reference purposes only.
+
+### Migration Guide
+
+Please migrate to the **[masto](https://www.npmjs.com/package/masto)** package, which is actively maintained and offers more features:
+
+```bash
+npm install masto
+```
+
+Learn more: https://www.npmjs.com/package/masto
+
+We thank everyone who used Tusk and wish you success with your migration.
+
+---
+
 # Tusk-Mastodon
 
 [Mastodon](https://github.com/skullzarmy/Tusk) API Client for node - forked from [node-mastodon](https://github.com/hylyh/node-mastodon) [abandoned]
